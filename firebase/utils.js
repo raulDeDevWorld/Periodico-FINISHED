@@ -101,7 +101,7 @@ async function getIndexData(setUserData, date, minDate, setUserSuccess) {
     });
 
 
-
+          
 
   get(query(ref(db, 'users')))
     .then((snapshot) => {
