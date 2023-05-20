@@ -1,0 +1,245 @@
+
+.containerFade {
+  margin: 5px 0;
+  border-bottom: 0px solid white;
+  width: 100%;
+  box-shadow: 0px 0px 1px rgb(255, 255, 255);
+
+}
+
+
+.containerFadeBanner {
+  position: relative;
+  padding: 0;
+  padding-top: 2px;
+  border: none;
+  width: 68vw;
+  height: auto;
+  z-index: 10000;
+  margin: 5px 0;
+  overflow: hidden;
+
+}
+
+.containerFade img, .containerFadeBanner img {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+.containerFade> :nth-child(1), .containerFadeBanner> :nth-child(1) {
+  position: relative;
+  height: auto;
+}
+
+.boxShadow {
+  box-shadow: 0px 0px 10px 2px #007484;
+  margin-bottom: 10px;
+}
+
+.containerFadeLeft> :nth-child(1),
+.containerFadeRight> :nth-child(1) {
+  position: relative;
+  height: auto;
+}
+
+.containerFade> :nth-child(n),
+.containerFadeLeft :nth-child(n),
+.containerFadeRight :nth-child(n) {
+  margin: 0;
+  padding: 0;
+}
+
+.containerFade ul,
+.containerFadeLeft ul,
+.containerFadeRight ul {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 0;
+  z-index: 1000000000000000;
+}
+
+
+
+.containerFadeLeft {
+  padding-top: 2px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 10000;
+  box-shadow: 0px 0px 1px rgba(255, 255, 255, 0);
+  /* box-shadow: 0px 0px 10px 2px #007484; */
+  /* box-shadow: 0px 0px 1px rgb(0, 0, 0); */
+
+  margin-bottom: 7px;
+
+}
+
+.containerFadeRight {
+  padding-top: 2px;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: 10000;
+  box-shadow: 0px 0px 1px rgba(253, 253, 253, 0);
+  /* box-shadow: 0px 0px 10px 2px #007484; */
+  /* box-shadow: 0px 0px 1px rgb(0, 0, 0); */
+
+  margin-bottom: 7px;
+
+}
+
+.containerFadeLeft span,
+.containerFadeRight  span {
+  position: relative;
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.containerFadeLeft span img,
+.containerFadeRight span img {
+  display: block;
+  cursor: pointer;
+  margin: 0;
+  width: 85%;
+  max-height: 70vh;
+  object-fit: contain;
+  object-position: top;
+  /* box-shadow: 0px 0px 1px rgb(0, 0, 0); */
+}
+
+.containerFade .sliderWhatsapp {
+  right: 5px;
+  bottom: 5px;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10000;
+
+}
+.containerIframe {
+  position: relative;
+  width: 85%;
+  cursor: pointer;
+}
+
+.containerIframeBody {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 0 0px;
+  cursor: pointer;
+  background-image: white;
+  background-size: 3%;
+}
+.containerIframeBody iframe {
+  position: relative;
+  width: 50%;
+
+  cursor: pointer;
+  height: 40vh;
+}
+
+.containerIframeBody span{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsiveIframe {
+  width: 85%;
+  z-index: 10000;
+}
+.editButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.containerFadeLeft span a img,
+.containerFadeRight span a img {
+  position: absolute;
+  cursor: pointer;
+  margin: 0;
+  right: 25px;
+  bottom: 5px;
+  width: 20px;
+  /* box-shadow: 0px 0px 1px rgb(0, 0, 0); */
+
+}
+
+
+
+@media (max-width: 1445px) {
+
+  .containerIframeBody iframe {
+    position: relative;
+    width: 40%;
+  
+    cursor: pointer;
+    height: 25vh;
+  }
+
+
+}
+@media (max-width: 1250px) {
+
+  .containerIframeBody iframe {
+    position: relative;
+    width: 45%;
+  
+    cursor: pointer;
+    height: 25vh;
+  }
+
+
+}
+@media (max-width: 1050px) {
+  .containerIframeBody iframe {
+    position: relative;
+    width: 60%;
+  
+    cursor: pointer;
+    height: 25vh;
+  }
+}
+
+@media (max-width: 850px) and (orientation: portrait) {
+  .containerIframeBody iframe {
+    position: relative;
+    width: 50%;
+  
+    cursor: pointer;
+    height: 25vh;
+  }
+  .containerFadeBanner {
+    width: 100vw;
+    padding: 0 5px;
+  }
+  .containerFadeLeft,
+  .containerFadeRight {
+    display: none;
+  }
+  .containerFadeNota {
+  display: inline-block;
+}
+
+}
+@media (max-width: 650px) {
+
+  .containerIframeBody iframe {
+    position: relative;
+    width: 100%;
+  
+    cursor: pointer;
+    height: 25vh;
+  }
+
+
+}
