@@ -14,6 +14,7 @@ export default function Form({ topic, value, color }) {
 
   const [data, setData] = useState({})
   const [isChecked, setIsChecked] = useState(true)
+  const [isCheckedComp, setIsCheckedComp] = useState(false)
   const [isCheckedLength, setIsCheckedLength] = useState(true)
 
 
@@ -47,6 +48,11 @@ export default function Form({ topic, value, color }) {
   }
   function handlerChecked() {
     setIsChecked(!isChecked)
+  }
+ function handlerChecked() {
+
+    setIsCheckedComp(!isCheckedComp)
+
   }
   function handlerCheckedLength() {
     setIsCheckedLength(!isCheckedLength)
@@ -159,7 +165,7 @@ export default function Form({ topic, value, color }) {
               <input type="radio" value="bottom" name="objectPositionPost" onChange={handlerEventChange} /> ⇩
               <input type="radio" value="right" name="objectPositionPost" onChange={handlerEventChange} /> ⇨
               <input type="checkbox" onClick={handlerChecked} checked={isChecked} onChange={handlerEventChange} /> Init
-              <input type="checkbox" onClick={handlerChecked} checked={isChecked} onChange={handlerEventChange} /> Comp
+              <input type="checkbox" onClick={handlerCheckedComp} checked={isCheckedComp} onChange={handlerEventChange} /> Comp
             </div>
             <Button style="buttonMiniSecondary" click={validator}>Guardar</Button>
           </form>
