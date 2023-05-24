@@ -13,10 +13,10 @@ async function uploadIMG(ruteDB, ruteSTG, fileName, file, setUserSuccess, monthA
     let newRuteDB = `/${ruteDB}/${fileName}`
     const options = {
         maxWidthOrHeight: 500,
-        maxSizeMB: compresse ? 2 : 0.07,
+        maxSizeMB: compresse  == false ? 2 : 0.07,
         alwaysKeepResolution: true,
         useWebWorker: true,
-        maxIteration: compresse ? 4 : 300,
+        maxIteration: compresse == false ? 4 : 300,
         fileType: 'image/webp'
     }
 
