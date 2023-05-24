@@ -49,7 +49,7 @@ export default function Form({ topic, value, color }) {
   function handlerChecked() {
     setIsChecked(!isChecked)
   }
- function handlerChecked() {
+ function handlerCheckedComp() {
 
     setIsCheckedComp(!isCheckedComp)
 
