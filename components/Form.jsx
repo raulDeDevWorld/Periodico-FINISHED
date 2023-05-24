@@ -14,7 +14,7 @@ export default function Form({ topic, value, color }) {
 
   const [data, setData] = useState({})
   const [isChecked, setIsChecked] = useState(true)
-  const [isCheckedComp, setIsCheckedComp] = useState(false)
+  const [isCheckedComp, setIsCheckedComp] = useState(true)
   const [isCheckedLength, setIsCheckedLength] = useState(true)
 
 
