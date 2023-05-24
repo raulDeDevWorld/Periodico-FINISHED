@@ -13,14 +13,14 @@ async function uploadIMG(ruteDB, ruteSTG, fileName, file, setUserSuccess, monthA
     let newRuteDB = `/${ruteDB}/${fileName}`
     const options = {
         maxWidthOrHeight: 500,
-        maxSizeMB: 0.07,
+        maxSizeMB: compresse ? 2 : 0.07,
         alwaysKeepResolution: true,
         useWebWorker: true,
-        maxIteration: 300,
+        maxIteration: compresse ? 4 : 300,
         fileType: 'image/webp'
     }
 
-    const compressedFile = file.type != 'image/gif' && compresse !== true ? await imageCompression(file, options) : file
+    const compressedFile = file.type != 'image/gif' ? await imageCompression(file, options) : file
 
     uploadBytes(imagesRef, compressedFile).then(async (snapshot) => {
         getDownloadURL(ref(storage, snapshot.metadata.fullPath))
