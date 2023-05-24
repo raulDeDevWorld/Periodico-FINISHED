@@ -118,10 +118,11 @@ export default function Form({ topic, value, color }) {
       const object = { [fileName]: { fecha: newDate.getTime(), description: data.descriptionPost ? data.descriptionPost : '', enlace: data.enlacePost ? data.enlacePost : `${num}${newDate.getTime()}`, objectFit: data.objectPositionPost ? data.objectPositionPost : 'center', nota: '' } }
       setUserSuccess('Cargando')
       writeUserData(ruteDB, object, setUserSuccess, setUserData)
-      uploadIMG(ruteDB, ruteSTG, fileName, postImage, setUserSuccess, monthYear)
+      uploadIMG(ruteDB, ruteSTG, fileName, postImage, setUserSuccess, monthYear, isCheckedComp)
 
+     
       isChecked && writeUserData(`/Inicio/Posts`, object, setUserSuccess, setUserData)
-      isChecked && uploadIMG(`/Inicio/Posts`, 'Inicio', fileName, postImage, setUserSuccess, monthYear)
+      isChecked && uploadIMG(`/Inicio/Posts`, 'Inicio', fileName, postImage, setUserSuccess, monthYear, isCheckedComp)
 
     } else {
       setUserSuccess("CompleteIMG")
