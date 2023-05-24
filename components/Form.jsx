@@ -159,7 +159,7 @@ export default function Form({ topic, value, color }) {
               <input type="radio" value="bottom" name="objectPositionPost" onChange={handlerEventChange} /> ⇩
               <input type="radio" value="right" name="objectPositionPost" onChange={handlerEventChange} /> ⇨
               <input type="checkbox" onClick={handlerChecked} checked={isChecked} onChange={handlerEventChange} /> Init
-<input type="checkbox" onClick={handlerChecked} checked={isChecked} onChange={handlerEventChange} /> Comp
+              <input type="checkbox" onClick={handlerChecked} checked={isChecked} onChange={handlerEventChange} /> Comp
             </div>
             <Button style="buttonMiniSecondary" click={validator}>Guardar</Button>
           </form>
